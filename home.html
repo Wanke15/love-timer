@@ -53,7 +53,9 @@
     <script>
         function timer() {
             var start = new Date(2017, 11, 17); // 2017.11.17
-            var t = new Date() - start;
+            var tmpDate = new Date();
+            var curDate = new Date(tmpDate.getFullYear(), tmpDate.getMonth() + 1, tmpDate.getDate());
+            var t = curDate - start;
             var h = ~~(t / 1000 / 60 / 60 % 24);
             if (h < 10) {
                 h = "0" + h;
